@@ -70,6 +70,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 114cb65ed4d00884c8b0df346a9591ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &447570249813341893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7143785295887234932}
+  - component: {fileID: 2824561462032555922}
+  m_Layer: 0
+  m_Name: Tower_+ 1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &7143785295887234932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447570249813341893}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8434148848824041101}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &2824561462032555922
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447570249813341893}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: ff75430847710a442846c56e10872583, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2.048, y: 2.048}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &8434148848824041103
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,6 +184,7 @@ Transform:
   m_Children:
   - {fileID: 8434148849471036698}
   - {fileID: 184577949}
+  - {fileID: 7143785295887234932}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -117,8 +200,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cc676b6d8b13de439f38d54a06468fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 2909861028142143227, guid: b3c01ea3a53d9494092d3cedb0fc0095, type: 3}
-  ngBltPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 2909861028142143227, guid: 920433f68102fc74284ced6926641956, type: 3}
+  ngBltPrefab: {fileID: 3982709605272419466, guid: 47ed38120873b9b468001b9c0ce5ba68, type: 3}
   TowerType: 0
   bulletCount: 1
   attackRange: 0
@@ -243,8 +326,8 @@ SpriteRenderer:
   m_SortingLayerID: 1513891743
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1350793827111531042, guid: d398798f69009b44fb70b17a342bf032, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 2507a16577b809b45bfaa17c4db53702, type: 3}
+  m_Color: {r: 1, g: 0.59164816, b: 0.3726415, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

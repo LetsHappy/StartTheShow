@@ -18,11 +18,14 @@ public class GameManager : MonoSingleton<GameManager>
 {
     
     // 路径序列
+    [Header("路径序列")]
     public List<Path> paths = new List<Path>();
     // 怪物序列
+    [Header("怪物生成序列")]
     public List<Monster> monsters = new List<Monster>();
     private int monsterNum;// 准备刷出的怪物
     // 怪物预制体
+    [Header("怪物预制体")]
     public List<GameObject> monsterPrefabs = new List<GameObject>();
 
     // 唯一的玩家控制负极塔
@@ -31,6 +34,8 @@ public class GameManager : MonoSingleton<GameManager>
     public float timeCountMax;
     public float timeCounter;
     public bool generateStop;
+
+    public List<GameObject> particlePrefabs = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
@@ -55,8 +60,7 @@ public class GameManager : MonoSingleton<GameManager>
     {
         int _id = _monster.ID;
         int _path = _monster.path;
-        GameObject monster = GameObject.Instantiate(monsterPrefabs[_id]);
-        monster.transform.position = paths[_path].nodes[0].transform.position;
+        GameObject monster = GameObject.Instantiate(monsterPrefabs[_id], paths[_path].nodes[0].transform.position, Quaternion.identity);
         monster.GetComponent<MonsterController>().pathID = _path;
     }
     public void SetNextMonster()
@@ -70,6 +74,10 @@ public class GameManager : MonoSingleton<GameManager>
             generateStop = true;
         }
         
+    }
+    public void GenerateParticle(int _id, Transform _transform)
+    {
+        GameObject particle = GameObject.Instantiate(particlePrefabs[_id], _transform.position, Quaternion.identity);
     }
 
     public void GameLoss()

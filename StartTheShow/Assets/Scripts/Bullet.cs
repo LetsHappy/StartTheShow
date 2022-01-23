@@ -51,6 +51,10 @@ public class Bullet : MonoBehaviour
             //transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, angelZ));
             transform.up = Vector2.Lerp(transform.up, toTarget, rotateSpeed);
 ;        }
+        else if (target == null)
+        {
+            target = targetTower;
+        }
     }
     public void FollowTarget(GameObject _target)
     {
@@ -75,17 +79,20 @@ public class Bullet : MonoBehaviour
             collision.GetComponent<MonsterController>().GetDamage(damage);
             //Destroy(this.gameObject);
             target = targetTower;
+            GameManager.Instance.GenerateParticle(2, transform);
             Debug.Log("Bullet: Hit monster");
         }
         if (collision.gameObject.CompareTag("NegativeTower") && BulletType == BulletType.PASITIVE)
         {
             collision.gameObject.GetComponent<TowerController>().ShotToTower(fromTower);
+            GameManager.Instance.GenerateParticle(1, transform);
             Destroy(this.gameObject);
             Debug.Log("Bullet: Hit tower");
         }
         if (collision.gameObject.CompareTag("Tower") && BulletType == BulletType.NEGATIVE)
         {
             collision.gameObject.GetComponent<TowerController>().bulletCount++;
+            GameManager.Instance.GenerateParticle(1, transform);
             Destroy(this.gameObject);
             Debug.Log("Bullet: Hit pasitive tower");
         }

@@ -88,6 +88,7 @@ public class MonsterController : MonoBehaviour
         healthPoint -= _damage;
         if (healthPoint <= 0)
         {
+            GameManager.Instance.GenerateParticle(0, transform);
             Destroy(this.gameObject);// 播放怪物死亡动画
         }
     }
